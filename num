@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Read the original image
+original_img = plt.imread('original_image.png')
+
+# Create a copy of the image
+img_copy = original_img.copy()
+
+# Set the green channel to 0
+img_copy[:, :, 1] = 0
+
+# Set the blue channel to 0
+img_copy[:, :, 2] = 0
+
+# Display the original and modified images side by side
+plt.subplot(1, 2, 1)
+plt.imshow(original_img)
+plt.title('Original Image')
+
+plt.subplot(1, 2, 2)
+plt.imshow(img_copy)
+plt.title('Modified Image (Green and Blue Channels Removed)')
+plt.show()
+
